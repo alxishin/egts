@@ -150,6 +150,7 @@ func handleRecvPkg(conn net.Conn, store Connector) {
 						exportPacket.Longitude = subRecData.Longitude
 						exportPacket.Speed = subRecData.Speed
 						exportPacket.Course = subRecData.Direction
+						exportPacket.DigitalInputs = subRecData.DigitalInputs
 						exportPacket.GUID = uuid.NewV4()
 					case *egts.SrExtPosData:
 						logger.Debugf("Разбор подзаписи EGTS_SR_EXT_POS_DATA")
